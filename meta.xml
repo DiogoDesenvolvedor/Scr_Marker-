@@ -1,0 +1,15 @@
+<meta>
+	<info author="DiogoScr" type="script" name="Sitema de Marker Free"/>
+    
+    <oop>true</oop>
+
+    <script type="client" src="code/client_render.lua" cache="false" />
+    <script type="client" src="code/client_create.lua" cache="false" />
+
+    <file src="files/floor.png" />
+    <file src="files/icons/shop.png" />
+    <file src="files/icons/clothes.png" />
+    <file src="files/icons/car.png" />
+    <file src="files/icons/policia.png" />
+    
+</meta>

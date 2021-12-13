@@ -1,0 +1,19 @@
+-- Como usar o marker
+
+triggerClientEvent( root ,"Dioguin-->CreateMarker" , root,  "MarkerAgenciaEmpregos",{x, y, z}, type trigger return, message, trigger return, bind open, tocolor marker, size, image)
+
+
+triggerClientEvent( root ,"Dioguin-->CreateMarker" , root,  "MarkerAgenciaEmpregos",{config["locais"]["agencia"][1], config["locais"]["agencia"][2], config["locais"]["agencia"][3]}, "server","Pressione 'E' para abrir agencia de empregos ", "DioguinOpenAgencia", "E", {255,255,255}, 1.5, ":[Dioguin]SistemaMarker/Files/icons/policia.png")
+
+addEvent("DioguinOpenAgencia", true)
+addEventHandler("DioguinOpenAgencia", getRootElement(), function ()
+    if getElementType(source) == "player" then 
+        return print("agencia aberta")
+    end
+end)
+
+addEventHandler("onResourceStop", getRootElement(), function (res)
+    if res == getThisResource() then 
+        triggerClientEvent(root, "Dioguin-->destruirMarker", root, "MarkerAgenciaEmpregos")
+    end
+end)
